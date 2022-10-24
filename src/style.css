@@ -1,0 +1,559 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* font */
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vitro_core";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KOTRAHOPE";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  line-height: 1;
+  background-color: black;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  color: #00ff37;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  font-size: 50px;
+  animation-name: spinCircle;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spinCircle {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.header h1 {
+  margin-right: 30px;
+}
+
+.header_left,
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .gnb {
+    display: none;
+  }
+}
+
+.gnb_list {
+  display: flex;
+  align-items: center;
+}
+
+/* substitute for Link */
+.gnb_item a {
+  font-family: "SBAggroB";
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.gnb_item a:hover {
+}
+
+.gnb_item {
+  transition: transform 0.2s; /* Animation */
+  margin-right: 30px;
+  font-size: 25px;
+}
+
+.gnb_item:hover {
+  transform: scale(1.2);
+}
+
+.search_icon {
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+/* black shadowing */
+.visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(000, 000, 000, 0.2);
+}
+
+.visual_wrap {
+  z-index: 1;
+  max-width: 1280px;
+}
+
+.visual_info {
+  display: flex;
+  align-items: center;
+}
+
+.visual_title {
+  font-family: "SBAggroB";
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.visual_box {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.visual_movieTitle {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.visual_rating {
+  margin-bottom: 20px;
+  color: #ffd400;
+}
+
+.visual_description {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  /* cut */
+  text-overflow: ellipsis;
+  /* omission ... */
+  line-height: 20px;
+  max-height: 82px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* limiting to 4 lines */
+  -webkit-box-orient: vertical;
+}
+
+.visual_detailGenres {
+  display: flex;
+  align-items: center;
+}
+
+.visual_detailGenres li {
+  font-family: "SBAggroB";
+  font-size: 16px;
+  background-color: #00ff37;
+  padding: 10px;
+  color: #000;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.visual_detailGenres li + li {
+  margin-left: 10px;
+}
+/* movie */
+.movie_box {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.movie_tit {
+  font-family: "SBAggroB";
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.movie_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15%, auto));
+}
+
+@media screen and (max-width: 1680px) {
+  .movie_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .movie_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, auto));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, auto));
+  }
+}
+
+.movie_img {
+  width: 100%;
+  position: relative;
+}
+
+.movie_imgBox {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  background-color: rgba(000, 000, 000, 0.2);
+  opacity: 0;
+}
+
+.movie_img:hover .movie_imgBox {
+  opacity: 1;
+}
+
+.movie_imgWrap {
+  margin: 0 auto;
+}
+
+.movie_imgYear {
+  font-family: "Vitro_core";
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.movie_imgRating {
+  font-family: "Vitro_core";
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movie_imgBtn {
+  font-family: "Vitro_core";
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  width: 80px;
+  height: 30px;
+  background-color: #00ff37;
+  border-radius: 5px;
+  color: #000;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.movie_title {
+  max-width: 220px;
+  font-family: "SBAggroB";
+  font-size: 20px;
+  color: #fff;
+  white-space: nowrap;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.movie_title:hover {
+  white-space: normal;
+  overflow: unset;
+}
+
+/* notice how the background alters */
+.movie_detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie_detailWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  background-color: rgba(000, 000, 000, 0.5);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.movie_detailTit {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.movie_detailImg {
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 4px solid #00ff37;
+  box-sizing: border-box;
+}
+
+.movie_detailImg img {
+  width: 100%;
+}
+
+.movie_rating {
+  margin-bottom: 20px;
+  color: #ffd400;
+  padding: 3px;
+
+  font-size: 30px;
+}
+
+.movie_detailIntro {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  max-width: 800px;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-height: 25px;
+  max-height: 220px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.movie_detailIntro:hover {
+  white-space: normal;
+  overflow: unset;
+}
+
+.movie_detailGenres {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie_detailGenres li {
+  font-family: "SBAggroB";
+  font-size: 16px;
+  background-color: #00ff37;
+  margin: 5px;
+  padding: 10px;
+  color: #000;
+  border-radius: 20px;
+}
