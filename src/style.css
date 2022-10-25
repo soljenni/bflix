@@ -612,3 +612,41 @@ table {
   height: 30px;
   cursor: pointer;
 }
+
+.list {
+  padding-top: 130px;
+}
+
+.movie_paging {
+  margin-top: 30px;
+}
+.movie_paging ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie_paging li {
+  font-family: "SBAggroB";
+  text-align: center;
+  line-height: 34px;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  color: #000;
+  background-color: #00ff37;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.movie_paging li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.movie_paging li.active a {
+  color: #fff;
+}

@@ -2,9 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Logo from "../img/BFILX.png";
-import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
 
 function Jeader() {
   return (

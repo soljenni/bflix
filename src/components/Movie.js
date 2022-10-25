@@ -7,9 +7,6 @@ function Movie({ id, coverImg, title, rating, year }) {
     e.target.src = Replace;
   };
 
-  const showTitle = (e) => {
-    console.log(e.target);
-  };
   return (
     <div className="movie_item">
       <div className="movie_img">
@@ -30,9 +27,7 @@ function Movie({ id, coverImg, title, rating, year }) {
           </div>
         </div>
       </div>
-      <h2 className="movie_title" onTouchMove={showTitle}>
-        {title}
-      </h2>
+      <h2 className="movie_title">{title}</h2>
     </div>
   );
 }
