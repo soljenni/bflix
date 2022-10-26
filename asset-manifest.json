@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/bflix/static/css/main.bff60baf.css",
-    "main.js": "/bflix/static/js/main.b6c0c576.js",
+    "main.js": "/bflix/static/js/main.c8d8e5ce.js",
     "static/js/787.5d5ea81f.chunk.js": "/bflix/static/js/787.5d5ea81f.chunk.js",
     "static/media/BFILX.png": "/bflix/static/media/BFILX.e69bee9e844e16a04f69.png",
     "index.html": "/bflix/index.html",
     "main.bff60baf.css.map": "/bflix/static/css/main.bff60baf.css.map",
-    "main.b6c0c576.js.map": "/bflix/static/js/main.b6c0c576.js.map",
+    "main.c8d8e5ce.js.map": "/bflix/static/js/main.c8d8e5ce.js.map",
     "787.5d5ea81f.chunk.js.map": "/bflix/static/js/787.5d5ea81f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bff60baf.css",
-    "static/js/main.b6c0c576.js"
+    "static/js/main.c8d8e5ce.js"
   ]
 }
